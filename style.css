@@ -528,6 +528,12 @@ section {
   color: var(--primary-light);
 }
 
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
 /* ===== EXPERIENCE TIMELINE ===== */
 .timeline {
   position: relative;

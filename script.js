@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===== Typing effect =====
   const typedEl = document.querySelector('.typed-text');
   if (typedEl) {
-    const words = ['Full-Stack Developer', 'Self-Hoster', 'Problem Solver', 'Linux Enthusiast'];
+    const words = JSON.parse(typedEl.getAttribute('data-words') || '["Développeur Full-Stack"]');
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;

@@ -2,10 +2,305 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludovic — Full-Stack Developer</title>
+    <meta name="description" content="Portfolio de Ludovic — Développeur Full-Stack basé en Belgique. Passionné par le développement web, le self-hosting et les technologies cloud.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="helloworld">
-    <h1>Hello world</h1>
+<body>
+
+<!-- Animated background -->
+<div class="bg-animation">
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+</div>
+<div class="particles"></div>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <a href="#" class="nav-logo">Ludovic</a>
+    <ul class="nav-links">
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#experience">Parcours</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+    <div class="hero-content reveal">
+        <div class="glass hero-badge">🇧🇪 Basé en Belgique — Disponible</div>
+        <h1>Salut, je suis <span class="gradient-text">Ludovic</span></h1>
+        <p class="hero-subtitle">
+            <span class="typed-text"></span><span class="typed-cursor"></span><br>
+            Étudiant en dernière année de Bachelier en Développement d'Applications à l'ISFCE Bruxelles.
+        </p>
+        <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">⬇ Découvrir mes projets</a>
+            <a href="https://github.com/ludvdber" target="_blank" rel="noopener" class="btn btn-outline">⭐ GitHub</a>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <div class="stat-number" data-target="500" data-suffix="+">0</div>
+                <div class="stat-label">Personnes aidées</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" data-target="30" data-suffix="K+">0</div>
+                <div class="stat-label">Téléchargements</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" data-target="8" data-suffix="+ ans">0</div>
+                <div class="stat-label">Self-hosting</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+    <h2 class="section-title reveal">À propos de moi</h2>
+    <p class="section-subtitle reveal">Développeur passionné avec un profil polyvalent</p>
+
+    <div class="about-grid">
+        <div class="about-text glass reveal-left">
+            <p>
+                Étudiant en dernière année à l'<strong>ISFCE Bruxelles</strong>, je prépare mon Bachelier en Développement d'Applications. Je suis également titulaire d'un <strong>certificat de Technicien PC & Réseau</strong> obtenu avec distinction à l'IFAPME.
+            </p>
+            <p>
+                J'ai récemment effectué un stage à l'<strong>Institut Royal d'Aéronomie Spatiale de Belgique (BIRA-IASB)</strong>, où j'ai travaillé sur des outils de traitement de données atmosphériques martiennes.
+            </p>
+            <p>
+                Autodidacte et passionné, je gère ma propre infrastructure serveur depuis 2016 et j'ai aidé plus de 500 personnes via une communauté Discord de support technique.
+            </p>
+        </div>
+
+        <div class="highlight-cards stagger">
+            <div class="glass highlight-card">
+                <div class="icon">🖥️</div>
+                <h4>Self-hosting</h4>
+                <p>Proxmox, Nginx, Cloudflare depuis 2016</p>
+            </div>
+            <div class="glass highlight-card">
+                <div class="icon">🎮</div>
+                <h4>30K+</h4>
+                <p>Téléchargements de modpacks</p>
+            </div>
+            <div class="glass highlight-card">
+                <div class="icon">💬</div>
+                <h4>500+</h4>
+                <p>Personnes aidées en support IT</p>
+            </div>
+            <div class="glass highlight-card">
+                <div class="icon">🎓</div>
+                <h4>Distinction</h4>
+                <p>IFAPME — Réseau sécurisé</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills">
+    <h2 class="section-title reveal">Compétences techniques</h2>
+    <p class="section-subtitle reveal">Technologies que je maîtrise et utilise au quotidien</p>
+
+    <div class="tech-category reveal">
+        <h3>💻 Langages</h3>
+        <div class="tech-grid stagger">
+            <div class="glass tech-tag">☕ Java</div>
+            <div class="glass tech-tag">🐍 Python</div>
+            <div class="glass tech-tag">🐘 PHP</div>
+            <div class="glass tech-tag">⚡ JavaScript</div>
+            <div class="glass tech-tag">🌐 HTML5</div>
+            <div class="glass tech-tag">🎨 CSS3</div>
+            <div class="glass tech-tag">🗃️ SQL</div>
+        </div>
+    </div>
+
+    <div class="tech-category reveal">
+        <h3>🧰 Frameworks & Librairies</h3>
+        <div class="tech-grid stagger">
+            <div class="glass tech-tag">🍃 Spring Boot</div>
+            <div class="glass tech-tag">🅱️ Bootstrap</div>
+        </div>
+    </div>
+
+    <div class="tech-category reveal">
+        <h3>🗄️ Bases de données</h3>
+        <div class="tech-grid stagger">
+            <div class="glass tech-tag">🐬 MySQL</div>
+            <div class="glass tech-tag">🔥 Firebird</div>
+        </div>
+    </div>
+
+    <div class="tech-category reveal">
+        <h3>🏗️ Infrastructure</h3>
+        <div class="tech-grid stagger">
+            <div class="glass tech-tag">🐧 Linux</div>
+            <div class="glass tech-tag">🪟 Windows</div>
+            <div class="glass tech-tag">📦 Proxmox</div>
+            <div class="glass tech-tag">🔀 Nginx</div>
+            <div class="glass tech-tag">☁️ Cloudflare</div>
+            <div class="glass tech-tag">🔧 Git</div>
+        </div>
+    </div>
+
+    <div class="tech-category reveal">
+        <h3>🌐 Réseau</h3>
+        <div class="tech-grid stagger">
+            <div class="glass tech-tag">🔌 VLAN</div>
+            <div class="glass tech-tag">📡 DHCP</div>
+            <div class="glass tech-tag">🌍 DNS</div>
+            <div class="glass tech-tag">📶 TCP/IP</div>
+        </div>
+    </div>
+
+    <div class="tech-category reveal">
+        <h3>📚 En cours d'apprentissage</h3>
+        <div class="tech-grid stagger">
+            <div class="glass tech-tag">⚛️ React.js</div>
+            <div class="glass tech-tag">🐳 Docker</div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects">
+    <h2 class="section-title reveal">Projets phares</h2>
+    <p class="section-subtitle reveal">Une sélection de mes réalisations les plus significatives</p>
+
+    <div class="projects-grid">
+        <div class="glass project-card reveal-left">
+            <div class="project-icon">🔬</div>
+            <h3>gem-mars-rpn2netcdf</h3>
+            <p>Outils CLI pour convertir les sorties du modèle atmosphérique GEM-Mars en format NetCDF-4 conforme CF. Développé durant mon stage au BIRA-IASB.</p>
+            <div class="project-tags">
+                <span>Python</span><span>xarray</span><span>Numba</span><span>NetCDF</span>
+            </div>
+            <a href="https://github.com/ludvdber/gem-mars-rpn2netcdf" target="_blank" rel="noopener" class="project-link">Voir sur GitHub →</a>
+        </div>
+
+        <div class="glass project-card reveal-right">
+            <div class="project-icon">📰</div>
+            <h3>ActuScope</h3>
+            <p>Site d'actualités avec architecture PHP MVC, offrant un double mode de rendu MPA/SPA avec AJAX. Authentification, favoris et recherche avancée.</p>
+            <div class="project-tags">
+                <span>PHP</span><span>MySQL</span><span>JavaScript</span><span>jQuery</span><span>Bootstrap</span>
+            </div>
+            <a href="https://github.com/ludvdber/ActuScope" target="_blank" rel="noopener" class="project-link">Voir sur GitHub →</a>
+        </div>
+
+        <div class="glass project-card reveal-left">
+            <div class="project-icon">🖥️</div>
+            <h3>Infrastructure Personnelle</h3>
+            <p>Homelab Proxmox hébergeant sites web, cloud privé et serveurs de jeux (jusqu'à 50 joueurs simultanés). Administration Linux complète avec reverse proxy Nginx.</p>
+            <div class="project-tags">
+                <span>Proxmox</span><span>Linux</span><span>Nginx</span><span>Cloudflare</span>
+            </div>
+        </div>
+
+        <div class="glass project-card reveal-right">
+            <div class="project-icon">🎮</div>
+            <h3>Modpacks — 30K+ downloads</h3>
+            <p>Modpacks orientés performance pour Lethal Company et R.E.P.O. Lethal Reloaded (21K+) et Reposition Protocol (8K+).</p>
+            <div class="project-tags">
+                <span>Thunderstore</span><span>Modding</span><span>Gaming</span>
+            </div>
+            <a href="https://thunderstore.io/c/lethal-company/p/ASTeam/LethalReloaded/" target="_blank" rel="noopener" class="project-link">Voir sur Thunderstore →</a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience">
+    <h2 class="section-title reveal">Parcours</h2>
+    <p class="section-subtitle reveal">Mon parcours académique et professionnel</p>
+
+    <div class="timeline reveal">
+        <div class="timeline-item">
+            <div class="date">2024 — Présent</div>
+            <h3>Stage — Traitement de données Mars</h3>
+            <div class="place">Institut Royal d'Aéronomie Spatiale de Belgique (BIRA-IASB)</div>
+            <p>Développement d'outils CLI en Python pour la conversion et le traitement de données atmosphériques martiennes du modèle GEM-Mars.</p>
+        </div>
+        <div class="timeline-item">
+            <div class="date">2022 — Présent</div>
+            <h3>Bachelier en Développement d'Applications</h3>
+            <div class="place">ISFCE Bruxelles</div>
+            <p>Formation en développement logiciel couvrant Java, PHP, JavaScript, bases de données et méthodologies de projet.</p>
+        </div>
+        <div class="timeline-item">
+            <div class="date">Certification — avec distinction</div>
+            <h3>Technicien PC & Réseau</h3>
+            <div class="place">IFAPME</div>
+            <p>Projet final : conception d'un réseau sécurisé pour une entreprise de streaming. VLAN, pare-feu, DNS et administration réseau.</p>
+        </div>
+        <div class="timeline-item">
+            <div class="date">Depuis 2016</div>
+            <h3>Self-hosting & Support IT</h3>
+            <div class="place">Infrastructure personnelle & Communauté Discord</div>
+            <p>Gestion de serveurs Proxmox, support technique bénévole pour plus de 500 personnes depuis 8 ans.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== INTERESTS ===== -->
+<section id="interests">
+    <h2 class="section-title reveal" style="text-align:center">Centres d'intérêt</h2>
+    <p class="section-subtitle reveal" style="text-align:center">Ce qui me passionne en dehors du code</p>
+
+    <div class="interests-grid stagger" style="margin-top:2rem">
+        <div class="glass interest-chip">🌌 Espace & Astronomie</div>
+        <div class="glass interest-chip">♟️ Échecs</div>
+        <div class="glass interest-chip">🎌 Culture japonaise</div>
+        <div class="glass interest-chip">💪 Fitness</div>
+        <div class="glass interest-chip">🍨 Milkshakes</div>
+    </div>
+</section>
+
+<!-- ===== LANGUAGES ===== -->
+<section id="languages" style="padding-top:2rem">
+    <h2 class="section-title reveal" style="text-align:center">Langues</h2>
+    <div class="interests-grid stagger" style="margin-top:2rem;justify-content:center">
+        <div class="glass interest-chip">🇫🇷 Français — Langue maternelle</div>
+        <div class="glass interest-chip">🇬🇧 Anglais — B1-B2</div>
+    </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+    <h2 class="section-title reveal" style="text-align:center">Contact</h2>
+    <p class="section-subtitle reveal" style="text-align:center">Envie de collaborer ? N'hésitez pas à me contacter</p>
+
+    <div class="contact-content reveal-scale">
+        <div class="contact-links">
+            <a href="https://github.com/ludvdber" target="_blank" rel="noopener" class="glass contact-card">
+                <span class="contact-icon">🐙</span>
+                <span>GitHub</span>
+            </a>
+            <a href="mailto:contact@ludovic.dev" class="glass contact-card">
+                <span class="contact-icon">✉️</span>
+                <span>Email</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>© 2025 Ludovic — Développé avec ❤️</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

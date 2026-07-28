@@ -3,322 +3,614 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ludovic — Full-Stack Developer</title>
-    <meta name="description" content="Portfolio de Ludovic — Développeur Full-Stack basé en Belgique. Passionné par le développement web, le self-hosting et les technologies cloud.">
-    <meta property="og:title" content="Ludovic — Full-Stack Developer">
-    <meta property="og:description" content="Portfolio de Ludovic — Développeur Full-Stack basé en Belgique. Passionné par le développement web, le self-hosting et les technologies cloud.">
-    <meta property="og:type" content="website">
+    <title>Ludovic — Développeur Full-Stack &amp; Infrastructure</title>
+
+    <meta name="author" content="Ludovic">
+    <meta name="description" content="Ludovic — Développeur Full-Stack &amp; Infrastructure en Belgique. Bachelier en Développement d'Applications (ISFCE, La Plus Grande Distinction). Java / Spring Boot, React, Linux &amp; self-hosting.">
+    <meta name="theme-color" content="#0a0a1a">
+    <link rel="canonical" href="https://ludvdber.github.io/">
+
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="Ludovic">
+    <meta property="og:title" content="Ludovic — Développeur Full-Stack &amp; Infrastructure">
+    <meta property="og:description" content="Bachelier en Développement d'Applications (ISFCE, La Plus Grande Distinction). Java / Spring Boot, React, Linux &amp; self-hosting depuis 2016.">
+    <meta property="og:url" content="https://ludvdber.github.io/">
+    <meta property="og:image" content="https://ludvdber.github.io/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:locale" content="fr_BE">
+    <meta property="og:locale:alternate" content="en_GB">
+    <meta property="profile:first_name" content="Ludovic">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ludovic — Développeur Full-Stack &amp; Infrastructure">
+    <meta name="twitter:description" content="Bachelier en Développement d'Applications (ISFCE, La Plus Grande Distinction). Java / Spring Boot, React, Linux &amp; self-hosting depuis 2016.">
+    <meta name="twitter:image" content="https://ludvdber.github.io/og-image.png">
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="og-image.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ludovic",
+      "givenName": "Ludovic",
+      "jobTitle": "Développeur Full-Stack & Infrastructure",
+      "url": "https://ludvdber.github.io/",
+      "image": "https://ludvdber.github.io/og-image.png",
+      "nationality": "BE",
+      "address": { "@type": "PostalAddress", "addressCountry": "BE" },
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "ISFCE — Institut Supérieur de Formation Continue d'Etterbeek",
+          "address": { "@type": "PostalAddress", "addressLocality": "Bruxelles", "addressCountry": "BE" }
+        },
+        { "@type": "EducationalOrganization", "name": "IFAPME" }
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Bachelier en Développement d'Applications — La Plus Grande Distinction",
+          "credentialCategory": "Bachelor's degree",
+          "dateCreated": "2026-06"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Technicien PC & Réseau — avec distinction",
+          "credentialCategory": "certificate",
+          "dateCreated": "2022-06"
+        }
+      ],
+      "knowsLanguage": [
+        { "@type": "Language", "name": "Français" },
+        { "@type": "Language", "name": "English" }
+      ],
+      "knowsAbout": ["Java", "Spring Boot", "React", "TypeScript", "Python", "PHP", "PostgreSQL", "Linux", "Proxmox", "Nginx", "Réseaux"],
+      "sameAs": [
+        "https://github.com/ludvdber",
+        "https://www.linkedin.com/in/ludovic-vanden-berghe/"
+      ]
+    }
+    </script>
 </head>
 <body>
 
+<a href="#main" class="skip-link" data-i18n="a11y.skip">Aller au contenu principal</a>
+
 <!-- Animated background -->
-<div class="bg-animation">
-    <div class="orb"></div>
+<div class="bg-animation" aria-hidden="true">
     <div class="orb"></div>
     <div class="orb"></div>
     <div class="orb"></div>
 </div>
-<div class="particles"></div>
+<div class="particles" aria-hidden="true"></div>
 
 <!-- Navigation -->
-<nav class="navbar">
-    <a href="#" class="nav-logo">Ludovic</a>
-    <ul class="nav-links">
-        <li><a href="#about">À propos</a></li>
-        <li><a href="#skills">Compétences</a></li>
-        <li><a href="#projects">Projets</a></li>
-        <li><a href="#experience">Parcours</a></li>
-        <li><a href="#contact">Contact</a></li>
+<nav class="navbar" aria-label="Navigation principale">
+    <a href="#hero" class="nav-logo"><span>Ludovic</span></a>
+
+    <ul class="nav-links" id="nav-menu" role="list">
+        <li><a href="#about" data-i18n="nav.about">À propos</a></li>
+        <li><a href="#skills" data-i18n="nav.skills">Compétences</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Projets</a></li>
+        <li><a href="#experience" data-i18n="nav.experience">Parcours</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
     </ul>
-    <button class="nav-toggle" aria-label="Menu">
-        <span></span><span></span><span></span>
-    </button>
+
+    <div class="nav-actions">
+        <button class="lang-toggle" id="lang-toggle" type="button" aria-label="Switch to English">EN</button>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-controls="nav-menu" aria-expanded="false" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
 </nav>
 
+<!-- tabindex="-1" : sans lui, le lien d'évitement fait défiler la page mais
+     ne déplace pas le focus clavier, qui repart alors dans la navigation. -->
+<main id="main" tabindex="-1">
+
 <!-- ===== HERO ===== -->
-<section class="hero" id="hero">
+<section class="hero" id="hero" aria-label="Présentation">
     <div class="hero-content reveal">
-        <div class="glass hero-badge">🇧🇪 Basé en Belgique — Disponible</div>
-        <h1>Salut, je suis <span class="gradient-text">Ludovic</span></h1>
-        <p class="hero-subtitle">
-            <span class="typed-text" data-words='["Développeur Full-Stack", "Self-Hoster", "Passionné de Linux", "Problem Solver"]'></span><span class="typed-cursor"></span><br>
-            Étudiant en dernière année de Bachelier en Développement d'Applications à l'ISFCE Bruxelles.
+        <p class="glass hero-badge">🇧🇪 <span data-i18n="hero.badge">Belgique · ouvert au télétravail</span></p>
+
+        <h1 data-i18n="hero.h1">Salut, je suis <span class="gradient-text">Ludovic</span></h1>
+
+        <!-- Le texte animé change toutes les 40 ms : un lecteur d'écran y lirait
+             un fragment arbitraire. On le masque et on expose une phrase stable. -->
+        <p class="hero-role">
+            <span class="typed-text" aria-hidden="true"
+                  data-words='["Développeur Full-Stack","Spring Boot &amp; React","Administrateur Linux","Self-Hoster depuis 2016"]'
+                  data-words-en='["Full-Stack Developer","Spring Boot &amp; React","Linux Administrator","Self-Hoster since 2016"]'></span><span class="typed-cursor" aria-hidden="true"></span>
+            <span class="sr-only" data-i18n="hero.role.sr">Développeur full-stack et administrateur système</span>
         </p>
+
+        <p class="hero-subtitle" data-i18n="hero.subtitle">
+            Développeur full-stack et administrateur système. Je construis des applications Java / Spring Boot et React,
+            et j'exploite ma propre infrastructure Linux depuis 2016.
+        </p>
+
+        <p class="hero-degree glass">
+            🎓 <strong data-i18n="hero.degree.title">Bachelier en Développement d'Applications</strong>
+            <span data-i18n="hero.degree.detail">— ISFCE Bruxelles, juin 2026, <em>La Plus Grande Distinction</em></span>
+        </p>
+
         <div class="hero-buttons">
-            <a href="#projects" class="btn btn-primary">⬇ Découvrir mes projets</a>
-            <a href="https://github.com/ludvdber" target="_blank" rel="noopener" class="btn btn-outline">⭐ GitHub</a>
+            <a href="#projects" class="btn btn-primary" data-i18n="hero.cta.projects">Voir mes projets</a>
+            <a href="https://www.linkedin.com/in/ludovic-vanden-berghe/" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn</a>
+            <a href="https://github.com/ludvdber" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
         </div>
+
         <div class="hero-stats">
             <div class="stat">
+                <div class="stat-number" data-target="48" data-suffix="K+">0</div>
+                <div class="stat-label" data-i18n="hero.stat.downloads">Téléchargements</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" data-target="10" data-suffix=" ans" data-suffix-i18n="hero.stat.years">0</div>
+                <div class="stat-label" data-i18n="hero.stat.selfhosting">Self-hosting</div>
+            </div>
+            <div class="stat">
                 <div class="stat-number" data-target="500" data-suffix="+">0</div>
-                <div class="stat-label">Personnes aidées</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number" data-target="30" data-suffix="K+">0</div>
-                <div class="stat-label">Téléchargements</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number" data-target="8" data-suffix="+ ans">0</div>
-                <div class="stat-label">Self-hosting</div>
+                <div class="stat-label" data-i18n="hero.stat.helped">Personnes aidées</div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- ===== ABOUT ===== -->
-<section id="about">
-    <h2 class="section-title reveal">À propos de moi</h2>
-    <p class="section-subtitle reveal">Développeur passionné avec un profil polyvalent</p>
+<section id="about" aria-labelledby="about-title">
+    <h2 class="section-title reveal" id="about-title" data-i18n="about.title">À propos</h2>
+    <p class="section-subtitle reveal" data-i18n="about.subtitle">Un profil double : développement applicatif et infrastructure</p>
 
     <div class="about-grid">
         <div class="about-text glass reveal-left">
-            <p>
-                Étudiant en dernière année à l'<strong>ISFCE Bruxelles</strong>, je prépare mon Bachelier en Développement d'Applications. Je suis également titulaire d'un <strong>certificat de Technicien PC & Réseau</strong> obtenu avec distinction à l'IFAPME.
+            <p data-i18n="about.p1">
+                Je viens d'obtenir mon <strong>Bachelier en Développement d'Applications</strong> à l'<strong>ISFCE Bruxelles</strong>
+                avec <strong>La Plus Grande Distinction</strong>, après trois ans de formation. Je suis également titulaire d'un
+                <strong>certificat de Technicien PC &amp; Réseau</strong> obtenu avec distinction à l'IFAPME.
             </p>
-            <p>
-                J'ai récemment effectué un stage à l'<strong>Institut Royal d'Aéronomie Spatiale de Belgique (BIRA-IASB)</strong>, où j'ai travaillé sur des outils de traitement de données atmosphériques martiennes.
+            <p data-i18n="about.p2">
+                Mon travail de fin d'études, réalisé dans le prolongement de mon stage à l'<strong>Institut Royal d'Aéronomie
+                Spatiale de Belgique (BIRA-IASB)</strong>, est une plateforme web de visualisation des données atmosphériques
+                martiennes du modèle GEM-Mars — Spring Boot, React et lecture partielle de fichiers NetCDF.
             </p>
-            <p>
-                Autodidacte et passionné, je gère ma propre infrastructure serveur depuis 2016 et j'ai aidé plus de 500 personnes via une communauté Discord de support technique.
+            <p data-i18n="about.p3">
+                Ce qui me caractérise, c'est de ne pas m'arrêter au code : j'administre ma propre infrastructure Proxmox depuis
+                2016, du réseau au reverse proxy jusqu'au déploiement. Cette double compétence me permet de comprendre une
+                application de bout en bout, du schéma de base de données au certificat TLS.
             </p>
         </div>
 
-        <div class="highlight-cards stagger">
-            <div class="glass highlight-card">
-                <div class="icon">🖥️</div>
-                <h4>Self-hosting</h4>
-                <p>Proxmox, Nginx, Cloudflare depuis 2016</p>
+        <!-- Colonne droite : rend scannable le « profil double » annoncé par le
+             sous-titre. Volontairement aucune reprise des chiffres du hero. -->
+        <aside class="about-aside glass reveal-right">
+            <div class="aside-block">
+                <h3><span aria-hidden="true">💻</span> <span data-i18n="about.aside.dev">Côté développement</span></h3>
+                <ul class="aside-list" role="list">
+                    <li>Java 21 · Spring Boot 4</li>
+                    <li>React 19 · TypeScript</li>
+                    <li>PostgreSQL · API REST</li>
+                    <li>OAuth2 · JPA / Hibernate</li>
+                    <li data-i18n="about.aside.dev.last">Python · PHP · C++</li>
+                </ul>
             </div>
-            <div class="glass highlight-card">
-                <div class="icon">🎮</div>
-                <h4>30K+</h4>
-                <p>Téléchargements de modpacks</p>
+
+            <div class="aside-block">
+                <h3><span aria-hidden="true">🏗️</span> <span data-i18n="about.aside.infra">Côté infrastructure</span></h3>
+                <ul class="aside-list" role="list">
+                    <li>Proxmox · Linux</li>
+                    <li data-i18n="about.aside.infra.proxy">Nginx · reverse proxy</li>
+                    <li data-i18n="about.aside.infra.net">DNS · VLAN · pare-feu</li>
+                    <li>TLS · Cloudflare</li>
+                    <li data-i18n="about.aside.infra.last">Déploiement · sauvegardes</li>
+                </ul>
             </div>
-            <div class="glass highlight-card">
-                <div class="icon">💬</div>
-                <h4>500+</h4>
-                <p>Personnes aidées en support IT</p>
-            </div>
-            <div class="glass highlight-card">
-                <div class="icon">🎓</div>
-                <h4>Distinction</h4>
-                <p>IFAPME — Réseau sécurisé</p>
-            </div>
-        </div>
+
+            <p class="aside-note" data-i18n="about.aside.note">
+                Les deux démos liées plus bas tournent sur cette infrastructure.
+            </p>
+        </aside>
     </div>
 </section>
 
 <!-- ===== SKILLS ===== -->
-<section id="skills">
-    <h2 class="section-title reveal">Compétences techniques</h2>
-    <p class="section-subtitle reveal">Technologies que je maîtrise et utilise au quotidien</p>
+<section id="skills" aria-labelledby="skills-title">
+    <h2 class="section-title reveal" id="skills-title" data-i18n="skills.title">Compétences techniques</h2>
+    <p class="section-subtitle reveal" data-i18n="skills.subtitle">Technologies utilisées sur des projets réels, pas seulement en cours</p>
 
     <div class="tech-category reveal">
-        <h3>💻 Langages</h3>
-        <div class="tech-grid stagger">
-            <div class="glass tech-tag">☕ Java</div>
-            <div class="glass tech-tag">🐍 Python</div>
-            <div class="glass tech-tag">🐘 PHP</div>
-            <div class="glass tech-tag">⚡ JavaScript</div>
-            <div class="glass tech-tag">🌐 HTML5</div>
-            <div class="glass tech-tag">🎨 CSS3</div>
-            <div class="glass tech-tag">🗃️ SQL</div>
-        </div>
+        <h3 data-i18n="skills.languages">💻 Langages</h3>
+        <ul class="tech-grid stagger" role="list">
+            <li class="glass tech-tag">Java</li>
+            <li class="glass tech-tag">TypeScript</li>
+            <li class="glass tech-tag">JavaScript</li>
+            <li class="glass tech-tag">Python</li>
+            <li class="glass tech-tag">PHP</li>
+            <li class="glass tech-tag">SQL</li>
+            <li class="glass tech-tag">C++</li>
+            <li class="glass tech-tag">HTML5</li>
+            <li class="glass tech-tag">CSS3</li>
+        </ul>
     </div>
 
     <div class="tech-category reveal">
-        <h3>🧰 Frameworks & Librairies</h3>
-        <div class="tech-grid stagger">
-            <div class="glass tech-tag">🍃 Spring Boot</div>
-            <div class="glass tech-tag">🅱️ Bootstrap</div>
-            <div class="glass tech-tag">💲 jQuery</div>
-        </div>
+        <h3 data-i18n="skills.backend">⚙️ Backend</h3>
+        <ul class="tech-grid stagger" role="list">
+            <li class="glass tech-tag">Spring Boot 4</li>
+            <li class="glass tech-tag">Spring Security</li>
+            <li class="glass tech-tag">JPA / Hibernate</li>
+            <li class="glass tech-tag">API REST</li>
+            <li class="glass tech-tag">OAuth2</li>
+            <li class="glass tech-tag">Virtual Threads</li>
+            <li class="glass tech-tag">PyQt6</li>
+        </ul>
     </div>
 
     <div class="tech-category reveal">
-        <h3>🗄️ Bases de données</h3>
-        <div class="tech-grid stagger">
-            <div class="glass tech-tag">🐬 MySQL</div>
-            <div class="glass tech-tag">🔥 Firebird</div>
-        </div>
+        <h3 data-i18n="skills.frontend">🎨 Frontend</h3>
+        <ul class="tech-grid stagger" role="list">
+            <li class="glass tech-tag">React 19</li>
+            <li class="glass tech-tag">Vite</li>
+            <li class="glass tech-tag">Material-UI</li>
+            <li class="glass tech-tag">Three.js</li>
+            <li class="glass tech-tag">Plotly.js</li>
+            <li class="glass tech-tag">Bootstrap</li>
+        </ul>
     </div>
 
     <div class="tech-category reveal">
-        <h3>🏗️ Infrastructure</h3>
-        <div class="tech-grid stagger">
-            <div class="glass tech-tag">🐧 Linux</div>
-            <div class="glass tech-tag">🪟 Windows</div>
-            <div class="glass tech-tag">📦 Proxmox</div>
-            <div class="glass tech-tag">🔀 Nginx</div>
-            <div class="glass tech-tag">☁️ Cloudflare</div>
-            <div class="glass tech-tag">🔧 Git</div>
-        </div>
+        <h3 data-i18n="skills.data">🗄️ Données &amp; stockage</h3>
+        <ul class="tech-grid stagger" role="list">
+            <li class="glass tech-tag">PostgreSQL</li>
+            <li class="glass tech-tag">MySQL</li>
+            <li class="glass tech-tag">Firebird</li>
+            <li class="glass tech-tag">NetCDF</li>
+        </ul>
     </div>
 
     <div class="tech-category reveal">
-        <h3>🌐 Réseau</h3>
-        <div class="tech-grid stagger">
-            <div class="glass tech-tag">🔌 VLAN</div>
-            <div class="glass tech-tag">📡 DHCP</div>
-            <div class="glass tech-tag">🌍 DNS</div>
-            <div class="glass tech-tag">📶 TCP/IP</div>
-        </div>
+        <h3 data-i18n="skills.infra">🏗️ Infrastructure &amp; outils</h3>
+        <ul class="tech-grid stagger" role="list">
+            <li class="glass tech-tag">Linux</li>
+            <li class="glass tech-tag">Proxmox</li>
+            <li class="glass tech-tag">Nginx</li>
+            <li class="glass tech-tag">Cloudflare</li>
+            <li class="glass tech-tag">Docker</li>
+            <li class="glass tech-tag">Git</li>
+            <li class="glass tech-tag">Gradle / Maven</li>
+            <li class="glass tech-tag">Windows Server</li>
+        </ul>
     </div>
 
     <div class="tech-category reveal">
-        <h3>📚 En cours d'apprentissage</h3>
-        <div class="tech-grid stagger">
-            <div class="glass tech-tag">⚛️ React.js</div>
-            <div class="glass tech-tag">🐳 Docker</div>
-        </div>
+        <h3 data-i18n="skills.network">🌐 Réseau &amp; systèmes</h3>
+        <ul class="tech-grid stagger" role="list">
+            <li class="glass tech-tag">VLAN</li>
+            <li class="glass tech-tag">DHCP</li>
+            <li class="glass tech-tag">DNS</li>
+            <li class="glass tech-tag">TCP/IP</li>
+            <li class="glass tech-tag" data-i18n="skills.tag.firewall">Pare-feu</li>
+            <li class="glass tech-tag" data-i18n="skills.tag.proxy">Reverse proxy</li>
+            <li class="glass tech-tag">TLS / SSL</li>
+        </ul>
     </div>
 </section>
 
 <!-- ===== PROJECTS ===== -->
-<section id="projects">
-    <h2 class="section-title reveal">Projets phares</h2>
-    <p class="section-subtitle reveal">Une sélection de mes réalisations les plus significatives</p>
+<section id="projects" aria-labelledby="projects-title">
+    <h2 class="section-title reveal" id="projects-title" data-i18n="projects.title">Projets</h2>
+    <p class="section-subtitle reveal" data-i18n="projects.subtitle">Deux projets phares, puis une sélection de réalisations</p>
 
+    <!-- Featured -->
+    <article class="glass project-card featured reveal">
+        <div class="featured-head">
+            <div class="project-icon" aria-hidden="true">🛰️</div>
+            <div>
+                <p class="project-kicker" data-i18n="projects.mcv.kicker">Travail de fin d'études — ISFCE 2026</p>
+                <h3>Mars Climate Viewer</h3>
+            </div>
+        </div>
+        <p data-i18n="projects.mcv.desc">
+            Plateforme web de visualisation des données atmosphériques GEM-Mars : exploration interactive de sorties de
+            simulation converties au format NetCDF. Le serveur ne lit que les sous-ensembles demandés — jamais les fichiers
+            entiers — ce qui permet de garder des simulations volumineuses côté serveur tout en restant réactif.
+            Onze types de visualisation (cartes 2D, animations, profils verticaux, coupes, moyennes zonales, diagrammes de
+            Hovmöller, roses des vents), permaliens partageables, export CSV/NetCDF et interface en cinq langues.
+        </p>
+        <ul class="project-tags">
+            <li>Spring Boot 4.1</li><li>Java 21</li><li>NetCDF-Java</li><li>React 19</li><li>Three.js</li><li>Plotly.js</li><li>Gradle</li>
+        </ul>
+        <div class="project-links">
+            <a href="https://mars.ludovdb.be/" target="_blank" rel="noopener" class="project-link primary">
+                <span data-i18n="projects.link.demo">Voir la démo</span> ↗</a>
+            <a href="https://github.com/ludvdber/MCV" target="_blank" rel="noopener" class="project-link">
+                <span data-i18n="projects.link.code">Code source</span> ↗</a>
+        </div>
+    </article>
+
+    <article class="glass project-card featured reveal">
+        <div class="featured-head">
+            <div class="project-icon" aria-hidden="true">📚</div>
+            <div>
+                <p class="project-kicker" data-i18n="projects.freenote.kicker">Projet personnel — en production</p>
+                <h3>Freenote</h3>
+            </div>
+        </div>
+        <p data-i18n="projects.freenote.desc">
+            Plateforme de partage de documents réservée aux étudiants vérifiés de l'ISFCE : authentification Discord OAuth2,
+            vérification de l'adresse @isfce.be, dépôt de PDF avec prévisualisation, recherche plein texte, favoris,
+            classement par XP, notifications temps réel en SSE et tableau de bord de modération.
+            L'ensemble se construit en un seul JAR autonome embarquant le frontend React.
+        </p>
+        <ul class="project-tags">
+            <li>Java 25</li><li>Spring Boot 4</li><li>PostgreSQL 17</li><li>Redis</li><li>MinIO</li><li>Meilisearch</li><li>React 19</li><li>TypeScript</li>
+        </ul>
+        <div class="project-links">
+            <a href="https://freenote.be/" target="_blank" rel="noopener" class="project-link primary">
+                <span data-i18n="projects.link.demo">Voir la démo</span> ↗</a>
+        </div>
+    </article>
+
+    <!-- Grid -->
     <div class="projects-grid">
-        <div class="glass project-card reveal-left">
-            <div class="project-icon">🔬</div>
+        <article class="glass project-card reveal">
+            <div class="project-icon" aria-hidden="true">🔬</div>
             <h3>gem-mars-rpn2netcdf</h3>
-            <p>Outils CLI pour convertir les sorties du modèle atmosphérique GEM-Mars en format NetCDF-4 conforme CF. Développé durant mon stage au BIRA-IASB.</p>
-            <div class="project-tags">
-                <span>Python</span><span>xarray</span><span>Numba</span><span>NetCDF</span>
-            </div>
-            <a href="https://github.com/ludvdber/gem-mars-rpn2netcdf" target="_blank" rel="noopener" class="project-link">Voir sur GitHub →</a>
-        </div>
-
-        <div class="glass project-card reveal-right">
-            <div class="project-icon">📰</div>
-            <h3>ActuScope</h3>
-            <p>Site d'actualités avec architecture PHP MVC, offrant un double mode de rendu MPA/SPA avec AJAX. Authentification, favoris et recherche avancée.</p>
-            <div class="project-tags">
-                <span>PHP</span><span>MySQL</span><span>JavaScript</span><span>jQuery</span><span>Bootstrap</span>
-            </div>
-            <a href="https://github.com/ludvdber/ActuScope" target="_blank" rel="noopener" class="project-link">Voir sur GitHub →</a>
-        </div>
-
-        <div class="glass project-card reveal-left">
-            <div class="project-icon">🖥️</div>
-            <h3>Infrastructure Personnelle</h3>
-            <p>Homelab Proxmox hébergeant sites web, cloud privé et serveurs de jeux (jusqu'à 50 joueurs simultanés). Administration Linux complète avec reverse proxy Nginx.</p>
-            <div class="project-tags">
-                <span>Proxmox</span><span>Linux</span><span>Nginx</span><span>Cloudflare</span>
-            </div>
-        </div>
-
-        <div class="glass project-card reveal-right">
-            <div class="project-icon">🎮</div>
-            <h3>Modpacks — 30K+ downloads</h3>
-            <p>Modpacks orientés performance pour Lethal Company et R.E.P.O. Lethal Reloaded (21K+) et Reposition Protocol (8K+).</p>
-            <div class="project-tags">
-                <span>Thunderstore</span><span>Modding</span><span>Gaming</span>
-            </div>
+            <p data-i18n="projects.gem.desc">
+                Outils en ligne de commande convertissant les sorties du modèle atmosphérique GEM-Mars en NetCDF-4 conforme
+                à la convention CF. Développé pendant mon stage au BIRA-IASB ; c'est la brique sur laquelle repose Mars Climate Viewer.
+            </p>
+            <ul class="project-tags" role="list"><li>Python</li><li>xarray</li><li>Numba</li><li>NetCDF</li></ul>
             <div class="project-links">
-                <a href="https://thunderstore.io/c/lethal-company/p/ASTeam/LethalReloaded/" target="_blank" rel="noopener" class="project-link">Lethal Reloaded →</a>
-                <a href="https://thunderstore.io/c/repo/p/ASTeam/RepositionProtocol/" target="_blank" rel="noopener" class="project-link">Reposition Protocol →</a>
+                <a href="https://github.com/ludvdber/gem-mars-rpn2netcdf" target="_blank" rel="noopener" class="project-link">
+                    <span data-i18n="projects.link.github">Voir sur GitHub</span> ↗</a>
             </div>
-        </div>
+        </article>
 
-        <div class="glass project-card reveal-left">
-            <div class="project-icon">🏗️</div>
-            <h3>Proxytech</h3>
-            <p>Template MVC en PHP pur, construit sans framework pour comprendre le routing, la séparation des responsabilités et l'architecture web from scratch.</p>
-            <div class="project-tags">
-                <span>PHP</span><span>MVC</span><span>CSS</span><span>JavaScript</span>
+        <article class="glass project-card reveal">
+            <div class="project-icon" aria-hidden="true">🖥️</div>
+            <h3 data-i18n="projects.infra.title">Infrastructure personnelle</h3>
+            <p data-i18n="projects.infra.desc">
+                Homelab Proxmox en service depuis 2016 : virtualisation, sites web, cloud privé et serveurs de jeux
+                accueillant jusqu'à 50 joueurs simultanés. Reverse proxy Nginx, certificats TLS, DNS, VLAN et sauvegardes.
+                C'est aussi ce qui héberge les démos de cette page.
+            </p>
+            <ul class="project-tags" role="list"><li>Proxmox</li><li>Linux</li><li>Nginx</li><li>Cloudflare</li><li>DNS</li></ul>
+        </article>
+
+        <article class="glass project-card reveal">
+            <div class="project-icon" aria-hidden="true">⚡</div>
+            <h3>Accio Launcher</h3>
+            <p data-i18n="projects.accio.desc">
+                Application de bureau qui télécharge, installe et lance six jeux Harry Potter PC de 2001 à 2009.
+                Interface soignée en PyQt6, téléchargements HTTPS en flux, protection contre la traversée de répertoires
+                et distribution en exécutable Windows autonome.
+            </p>
+            <ul class="project-tags" role="list"><li>Python 3.12</li><li>PyQt6</li><li>httpx</li><li>PyInstaller</li></ul>
+            <div class="project-links">
+                <a href="https://acciolauncher.be/" target="_blank" rel="noopener" class="project-link primary">
+                    <span data-i18n="projects.link.site">Voir le site</span> ↗</a>
+                <a href="https://github.com/ludvdber/AccioLauncher" target="_blank" rel="noopener" class="project-link">
+                    <span data-i18n="projects.link.github">Voir sur GitHub</span> ↗</a>
             </div>
-            <a href="https://github.com/ludvdber/Proxytech" target="_blank" rel="noopener" class="project-link">Voir sur GitHub →</a>
-        </div>
+        </article>
+
+        <article class="glass project-card reveal">
+            <div class="project-icon" aria-hidden="true">🎮</div>
+            <h3 data-i18n="projects.modpacks.title">Lethal Reloaded — 48K téléchargements</h3>
+            <p data-i18n="projects.modpacks.desc">
+                Modpack axé performance pour Lethal Company, distribué sur Thunderstore. Il assemble et équilibre
+                146 mods — plus de 50 lunes et 20 ennemis — tout en préservant la stabilité du framerate.
+                Maintenu de version en version pour suivre les mises à jour du jeu et des mods.
+            </p>
+            <ul class="project-tags" role="list"><li>Thunderstore</li><li>BepInEx</li><li>Modding</li></ul>
+            <div class="project-links">
+                <a href="https://thunderstore.io/c/lethal-company/p/ASTeam/LethalReloaded/" target="_blank" rel="noopener" class="project-link">
+                    <span data-i18n="projects.link.thunderstore">Voir sur Thunderstore</span> ↗</a>
+                <a href="https://github.com/ludvdber/Lethal-Reloaded" target="_blank" rel="noopener" class="project-link">
+                    <span data-i18n="projects.link.github">Voir sur GitHub</span> ↗</a>
+            </div>
+        </article>
+
+        <article class="glass project-card reveal">
+            <div class="project-icon" aria-hidden="true">📰</div>
+            <h3>ActuScope</h3>
+            <p data-i18n="projects.actuscope.desc">
+                Site d'actualités bâti sur une architecture PHP MVC, avec un double mode de rendu : navigation classique
+                multi-pages ou application monopage via AJAX. Authentification, favoris et recherche avancée.
+            </p>
+            <ul class="project-tags" role="list"><li>PHP</li><li>MySQL</li><li>JavaScript</li><li>jQuery</li><li>Bootstrap</li></ul>
+            <div class="project-links">
+                <a href="https://github.com/ludvdber/ActuScope" target="_blank" rel="noopener" class="project-link">
+                    <span data-i18n="projects.link.github">Voir sur GitHub</span> ↗</a>
+            </div>
+        </article>
+
+        <article class="glass project-card reveal">
+            <div class="project-icon" aria-hidden="true">📋</div>
+            <h3 data-i18n="projects.dispenses.title">Demandes de dispenses</h3>
+            <p data-i18n="projects.dispenses.desc">
+                Application Java de gestion des demandes de dispense de cours, côté étudiant : soumission d'un dossier,
+                pièces justificatives et suivi de l'état de la demande.
+            </p>
+            <ul class="project-tags" role="list"><li>Java</li><li>SQL</li><li>MVC</li></ul>
+            <div class="project-links">
+                <a href="https://github.com/ludvdber/projet-dispenses-ecole" target="_blank" rel="noopener" class="project-link">
+                    <span data-i18n="projects.link.github">Voir sur GitHub</span> ↗</a>
+            </div>
+        </article>
+    </div>
+
+    <!-- Secondary -->
+    <div class="more-projects reveal">
+        <h3 data-i18n="projects.more.title">Aussi sur mon GitHub</h3>
+        <ul class="more-list stagger" role="list">
+            <li class="glass more-item">
+                <a href="https://github.com/ludvdber/Harry-Potter-and-the-Order-of-the-Phoenix-PC-Fix" target="_blank" rel="noopener">
+                    <strong>Order of the Phoenix — PC Fix</strong>
+                    <span data-i18n="projects.more.d3d9">Wrapper Direct3D 9 en C++ corrigeant le rendu du jeu sur Windows moderne</span>
+                    <em>C++</em>
+                </a>
+            </li>
+            <li class="glass more-item">
+                <a href="https://github.com/ludvdber/Proxytech" target="_blank" rel="noopener">
+                    <strong>Proxytech</strong>
+                    <span data-i18n="projects.more.proxytech">Template MVC en PHP pur, sans framework, pour maîtriser le routing et la séparation des responsabilités</span>
+                    <em>PHP</em>
+                </a>
+            </li>
+            <li class="glass more-item">
+                <a href="https://acciolauncher.be/" target="_blank" rel="noopener">
+                    <strong>acciolauncher.be</strong>
+                    <span data-i18n="projects.more.acciosite">Site vitrine et canal de distribution d'Accio Launcher, hébergé sur mon infrastructure</span>
+                    <em>JavaScript</em>
+                </a>
+            </li>
+        </ul>
     </div>
 </section>
 
 <!-- ===== EXPERIENCE ===== -->
-<section id="experience">
-    <h2 class="section-title reveal">Parcours</h2>
-    <p class="section-subtitle reveal">Mon parcours académique et professionnel</p>
+<section id="experience" aria-labelledby="experience-title">
+    <h2 class="section-title reveal" id="experience-title" data-i18n="exp.title">Parcours</h2>
+    <p class="section-subtitle reveal" data-i18n="exp.subtitle">Formation, expérience professionnelle et pratique personnelle</p>
 
-    <div class="timeline reveal">
-        <div class="timeline-item">
-            <div class="date">2024 — Présent</div>
-            <h3>Stage — Traitement de données Mars</h3>
-            <div class="place">Institut Royal d'Aéronomie Spatiale de Belgique (BIRA-IASB)</div>
-            <p>Développement d'outils CLI en Python pour la conversion et le traitement de données atmosphériques martiennes du modèle GEM-Mars.</p>
-        </div>
-        <div class="timeline-item">
-            <div class="date">2022 — Présent</div>
-            <h3>Bachelier en Développement d'Applications</h3>
-            <div class="place">ISFCE Bruxelles</div>
-            <p>Formation en développement logiciel couvrant Java, PHP, JavaScript, bases de données et méthodologies de projet.</p>
-        </div>
-        <div class="timeline-item">
-            <div class="date">Certification — avec distinction</div>
-            <h3>Technicien PC & Réseau</h3>
-            <div class="place">IFAPME</div>
-            <p>Projet final : conception d'un réseau sécurisé pour une entreprise de streaming. VLAN, pare-feu, DNS et administration réseau.</p>
-        </div>
-        <div class="timeline-item">
-            <div class="date">Depuis 2016</div>
-            <h3>Self-hosting & Support IT</h3>
-            <div class="place">Infrastructure personnelle & Communauté Discord</div>
-            <p>Gestion de serveurs Proxmox, support technique bénévole pour plus de 500 personnes depuis 8 ans.</p>
-        </div>
-    </div>
+    <ol class="timeline reveal" role="list">
+        <li class="timeline-item">
+            <p class="date">
+                <span data-i18n="exp.bachelor.date">Septembre 2023 — Juin 2026</span>
+                <span class="tag-type" data-i18n="exp.type.education">Formation</span>
+            </p>
+            <h3 data-i18n="exp.bachelor.title">Bachelier en Développement d'Applications</h3>
+            <p class="place">ISFCE Bruxelles — <strong data-i18n="exp.bachelor.honours">La Plus Grande Distinction</strong></p>
+            <p data-i18n="exp.bachelor.desc">
+                Formation de trois ans en développement logiciel : Java, PHP, JavaScript, bases de données, réseaux et
+                méthodologies de projet. Travail de fin d'études : « Plateforme web de visualisation des données
+                atmosphériques GEM-Mars — exploration interactive de sorties de simulation converties au format NetCDF ».
+            </p>
+        </li>
+
+        <li class="timeline-item">
+            <p class="date">
+                <span data-i18n="exp.internship.date">Octobre — Décembre 2025</span>
+                <span class="tag-type" data-i18n="exp.type.work">Expérience</span>
+            </p>
+            <h3 data-i18n="exp.internship.title">Stage — Traitement de données martiennes</h3>
+            <p class="place">Institut Royal d'Aéronomie Spatiale de Belgique (BIRA-IASB)</p>
+            <p data-i18n="exp.internship.desc">
+                Développement d'outils en ligne de commande en Python pour convertir les sorties du modèle atmosphérique
+                GEM-Mars vers du NetCDF-4 conforme CF, en travaillant sur des données de simulation scientifiques réelles.
+                Ce stage a donné naissance à mon travail de fin d'études.
+            </p>
+        </li>
+
+        <li class="timeline-item">
+            <p class="date">
+                <span data-i18n="exp.ifapme.date">Septembre 2020 — Juin 2022</span>
+                <span class="tag-type" data-i18n="exp.type.education">Formation</span>
+            </p>
+            <h3 data-i18n="exp.ifapme.title">Technicien PC &amp; Réseau</h3>
+            <p class="place">IFAPME — <strong data-i18n="exp.ifapme.honours">avec distinction</strong></p>
+            <p data-i18n="exp.ifapme.desc">
+                Certification en support informatique et administration réseau. Projet final : conception d'un réseau
+                sécurisé pour une entreprise de streaming — segmentation VLAN, pare-feu, DNS et supervision.
+            </p>
+        </li>
+
+        <li class="timeline-item">
+            <p class="date">
+                <span data-i18n="exp.selfhost.date">Depuis 2016</span>
+                <span class="tag-type" data-i18n="exp.type.personal">Personnel</span>
+            </p>
+            <h3 data-i18n="exp.selfhost.title">Self-hosting &amp; support informatique</h3>
+            <p class="place" data-i18n="exp.selfhost.place">Infrastructure personnelle &amp; communauté Discord</p>
+            <p data-i18n="exp.selfhost.desc">
+                Dix ans d'administration continue d'une infrastructure Proxmox et Linux, et support technique bénévole
+                pour plus de 500 personnes au sein d'une communauté Discord.
+            </p>
+        </li>
+    </ol>
 </section>
 
-<!-- ===== INTERESTS ===== -->
-<section id="interests">
-    <h2 class="section-title reveal" style="text-align:center">Centres d'intérêt</h2>
-    <p class="section-subtitle reveal" style="text-align:center">Ce qui me passionne en dehors du code</p>
+<!-- ===== LANGUAGES & INTERESTS ===== -->
+<section id="extras" aria-labelledby="extras-title">
+    <h2 class="section-title reveal" id="extras-title" data-i18n="extras.title">Langues &amp; centres d'intérêt</h2>
 
-    <div class="interests-grid stagger" style="margin-top:2rem">
-        <div class="glass interest-chip">🌌 Espace & Astronomie</div>
-        <div class="glass interest-chip">♟️ Échecs</div>
-        <div class="glass interest-chip">🎌 Culture japonaise</div>
-        <div class="glass interest-chip">💪 Fitness</div>
-        <div class="glass interest-chip">🍨 Milkshakes</div>
-    </div>
-</section>
+    <div class="extras-grid">
+        <div class="glass extras-block reveal-left">
+            <h3 data-i18n="extras.languages">🗣️ Langues</h3>
+            <ul class="lang-list" role="list">
+                <li>
+                    <span class="lang-name">🇫🇷 <span data-i18n="extras.fr">Français</span></span>
+                    <span class="lang-level" data-i18n="extras.fr.level">Langue maternelle</span>
+                </li>
+                <li>
+                    <span class="lang-name">🇬🇧 <span data-i18n="extras.en">Anglais</span></span>
+                    <span class="lang-level" data-i18n="extras.en.level">B1-B2 — bonne compréhension écrite et orale, expression en progression</span>
+                </li>
+            </ul>
+        </div>
 
-<!-- ===== LANGUAGES ===== -->
-<section id="languages" style="padding-top:2rem">
-    <h2 class="section-title reveal" style="text-align:center">Langues</h2>
-    <div class="interests-grid stagger" style="margin-top:2rem;justify-content:center">
-        <div class="glass interest-chip">🇫🇷 Français — Langue maternelle</div>
-        <div class="glass interest-chip">🇬🇧 Anglais — B1-B2</div>
+        <div class="glass extras-block reveal-right">
+            <h3 data-i18n="extras.interests">✨ Centres d'intérêt</h3>
+            <ul class="interests-grid stagger" role="list">
+                <li class="interest-chip" data-i18n="extras.space">🌌 Espace &amp; astronomie</li>
+                <li class="interest-chip" data-i18n="extras.chess">♟️ Échecs</li>
+                <li class="interest-chip" data-i18n="extras.japan">🎌 Culture japonaise</li>
+                <li class="interest-chip" data-i18n="extras.fitness">💪 Fitness</li>
+                <li class="interest-chip" data-i18n="extras.milkshakes">🍨 Milkshakes</li>
+            </ul>
+        </div>
     </div>
 </section>
 
 <!-- ===== CONTACT ===== -->
-<section id="contact">
-    <h2 class="section-title reveal" style="text-align:center">Contact</h2>
-    <p class="section-subtitle reveal" style="text-align:center">Envie de collaborer ? N'hésitez pas à me contacter</p>
+<section id="contact" aria-labelledby="contact-title">
+    <h2 class="section-title reveal" id="contact-title" data-i18n="contact.title">Contact</h2>
+    <p class="section-subtitle reveal" data-i18n="contact.subtitle">Basé en Belgique, ouvert au télétravail — n'hésitez pas à me contacter</p>
 
-    <div class="contact-content reveal-scale">
-        <div class="contact-links">
-            <a href="https://github.com/ludvdber" target="_blank" rel="noopener" class="glass contact-card">
-                <span class="contact-icon">🐙</span>
-                <span>GitHub</span>
-            </a>
-            <a href="mailto:contact@ludovic.dev" class="glass contact-card">
-                <span class="contact-icon">✉️</span>
-                <span>Email</span>
-            </a>
-        </div>
+    <div class="contact-links reveal-scale">
+        <a href="https://www.linkedin.com/in/ludovic-vanden-berghe/" target="_blank" rel="noopener" class="glass contact-card">
+            <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" role="img" aria-label="LinkedIn">
+                    <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/>
+                </svg>
+            </span>
+            <span class="contact-body">
+                <strong>LinkedIn</strong>
+                <span data-i18n="contact.linkedin">Profil professionnel</span>
+            </span>
+        </a>
+
+        <a href="https://github.com/ludvdber" target="_blank" rel="noopener" class="glass contact-card">
+            <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" role="img" aria-label="GitHub">
+                    <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.9 18.3 5.2 18.3 5.2c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/>
+                </svg>
+            </span>
+            <span class="contact-body">
+                <strong>GitHub</strong>
+                <span>ludvdber</span>
+            </span>
+        </a>
     </div>
 </section>
 
-<!-- Footer -->
+</main>
+
 <footer class="footer">
-    <p>© 2026 Ludovic — Développé avec ❤️</p>
+    <p>© 2026 Ludovic</p>
 </footer>
 
+<script src="i18n.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

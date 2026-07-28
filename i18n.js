@@ -112,6 +112,7 @@ const EN = {
   'exp.selfhost.desc': 'Ten years of continuously administering Proxmox and Linux infrastructure, plus volunteer technical support for more than 500 people within a Discord community.',
 
   'extras.title': 'Languages &amp; interests',
+  'extras.subtitle': 'What I speak, and what keeps me busy outside code',
   'extras.languages': '🗣️ Languages',
   'extras.fr': 'French',
   'extras.fr.level': 'Native language',
@@ -213,7 +214,7 @@ const I18n = (() => {
 
     try { localStorage.setItem(STORAGE_KEY, current); } catch (e) { /* mode privé */ }
 
-    document.dispatchEvent(new CustomEvent('languagechange', { detail: { lang: current } }));
+    document.dispatchEvent(new CustomEvent('lvb:languagechange', { detail: { lang: current } }));
   }
 
   function setMeta(attr, name, value) {

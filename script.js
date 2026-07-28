@@ -17,12 +17,22 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ===== Révélation au scroll ===== */
   const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .stagger');
 
+  /* Le décalage en cascade est calculé à partir de l'index de l'enfant plutôt
+     que listé en nth-child : la liste s'arrêtait à 9, soit exactement la
+     taille de la plus longue série — un dixième élément n'aurait plus été
+     décalé du tout. */
+  function indexStagger(container) {
+    if (!container.classList.contains('stagger')) return;
+    [...container.children].forEach((child, i) => child.style.setProperty('--stagger-i', i));
+  }
+
   if (reducedMotion.matches) {
     revealElements.forEach(el => el.classList.add('visible'));
   } else {
     const revealObserver = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
+          indexStagger(entry.target);
           entry.target.classList.add('visible');
           obs.unobserve(entry.target);   // une seule fois : rien ne réapparaît en remontant
         }
@@ -88,10 +98,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
   navMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
 
+  /* Menu ouvert : le focus doit rester dedans. Sans cela, Tab emmène
+     l'utilisateur clavier dans le contenu masqué derrière le panneau. */
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+    if (!navMenu.classList.contains('open')) return;
+
+    if (e.key === 'Escape') {
       closeMenu();
       navToggle.focus();
+      return;
+    }
+
+    if (e.key !== 'Tab') return;
+
+    const focusable = [navToggle, ...navMenu.querySelectorAll('a')];
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
     }
   });
 
@@ -229,8 +258,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ===== Réactions au changement de langue ===== */
-  document.addEventListener('languagechange', () => {
+  /* Onglet masqué : inutile de réveiller le fil principal toutes les 40 ms
+     pour animer un texte que personne ne regarde. */
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) clearTimeout(typingTimer);
+    else startTyping();
+  });
+
+  /* ===== Réactions au changement de langue =====
+     Événement préfixé : « languagechange » tout court est déjà un événement
+     natif de la plateforme, mieux vaut ne pas partager son nom. */
+  document.addEventListener('lvb:languagechange', () => {
     startTyping();
     /* Les compteurs déjà terminés doivent reprendre le bon suffixe. */
     counters.forEach(el => {

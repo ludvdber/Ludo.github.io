@@ -28,11 +28,9 @@
     <meta name="twitter:image" content="https://ludvdber.github.io/og-image.png">
 
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="og-image.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="style.css">
 
     <script type="application/ld+json">
@@ -117,7 +115,7 @@
 <main id="main" tabindex="-1">
 
 <!-- ===== HERO ===== -->
-<section class="hero" id="hero" aria-label="Présentation">
+<section class="hero" id="hero" aria-labelledby="hero-sr-label">
     <div class="hero-content reveal">
         <p class="glass hero-badge">🇧🇪 <span data-i18n="hero.badge">Belgique · ouvert au télétravail</span></p>
 
@@ -129,7 +127,7 @@
             <span class="typed-text" aria-hidden="true"
                   data-words='["Développeur Full-Stack","Spring Boot &amp; React","Administrateur Linux","Self-Hoster depuis 2016"]'
                   data-words-en='["Full-Stack Developer","Spring Boot &amp; React","Linux Administrator","Self-Hoster since 2016"]'></span><span class="typed-cursor" aria-hidden="true"></span>
-            <span class="sr-only" data-i18n="hero.role.sr">Développeur full-stack et administrateur système</span>
+            <span class="sr-only" id="hero-sr-label" data-i18n="hero.role.sr">Développeur full-stack et administrateur système</span>
         </p>
 
         <p class="hero-subtitle" data-i18n="hero.subtitle">
@@ -283,7 +281,6 @@
             <li class="glass tech-tag">Proxmox</li>
             <li class="glass tech-tag">Nginx</li>
             <li class="glass tech-tag">Cloudflare</li>
-            <li class="glass tech-tag">Docker</li>
             <li class="glass tech-tag">Git</li>
             <li class="glass tech-tag">Gradle / Maven</li>
             <li class="glass tech-tag">Windows Server</li>
@@ -351,7 +348,7 @@
             L'ensemble se construit en un seul JAR autonome embarquant le frontend React.
         </p>
         <ul class="project-tags">
-            <li>Java 25</li><li>Spring Boot 4</li><li>PostgreSQL 17</li><li>Redis</li><li>MinIO</li><li>Meilisearch</li><li>React 19</li><li>TypeScript</li>
+            <li>Java 25</li><li>Spring Boot 4</li><li>PostgreSQL 17</li><li>OAuth2</li><li>React 19</li><li>TypeScript</li>
         </ul>
         <div class="project-links">
             <a href="https://freenote.be/" target="_blank" rel="noopener" class="project-link primary">
@@ -543,6 +540,7 @@
 <!-- ===== LANGUAGES & INTERESTS ===== -->
 <section id="extras" aria-labelledby="extras-title">
     <h2 class="section-title reveal" id="extras-title" data-i18n="extras.title">Langues &amp; centres d'intérêt</h2>
+    <p class="section-subtitle reveal" data-i18n="extras.subtitle">Ce que je parle, et ce qui m'occupe en dehors du code</p>
 
     <div class="extras-grid">
         <div class="glass extras-block reveal-left">
